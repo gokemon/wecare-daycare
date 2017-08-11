@@ -25,7 +25,7 @@
                 <ul class="nav nav-pills float-right">
                     <li class="nav-item">
                         <!-- <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
-                        <a class="nav-link" href="assets/profile-user.html">Sign Up</a>
+                        <a class="nav-link" href="assets/signup2.html">Sign Up</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="assets/login.html">Login</a>
@@ -41,33 +41,34 @@
             <h3 class="display-3">DayCare Reviews</h3>
             <p class="lead">Select a City to see providers. SignUp to Create Reveiws, Login to Edit.</p>
             <p>
-                <label for="select">Select a County</label>
-                <select id="select">
+                <form>
+                    <label for="select">Select a County</label>
+                    <select id="cityNav" onChange="if(this.selectedIndex!=0) self.location=this.options[this.selectedIndex].value">
             <option value="">Choose...</option>
-            <option label="Carroll">Carroll</option>
-            <option label="Cobb">Cobb</option>
-            <option label="Fullton County">Fullton</option>
+            <option value="assets/cityDisplay.htm" label="Carroll">Carroll</option>
+            <option value="assets/cityDisplay.htm" label="Cobb">Cobb</option>
+            <option value="assets/cityDisplay.htm" label="Fullton County">Fullton</option>
             <optgroup label="Gwinnett County">
-              <option value="Auburn">Auburn</option>
-              <option value="Berkeley-Lake">Berkeley Lake</option>
-              <option value="Buford">Buford</option>
-              <option value="Dacula">Dacula</option>
-              <option value="Duluth">Duluth</option>
-              <option value="Grayson">Grayson</option>
-              <option value="Lawrenceville">Lawrenceville</option>
-              <option value="Lilburn">Lilburn</option>
-              <option value="Loganville">Loganville</option>
-              <option value="Norcross">Norcross</option>
-              <option value="Peachtree-Corners">Peachtree Corners</option>
-              <option value="Snellville">Snellville</option>
-              <option value="Sugar-Hill">Sugar Hill</option>
-              <option value="Suwanee">Suwanee</option>
+              <option value="assets/cityDisplay.htm">Auburn</option>
+              <option value="assets/cityDisplay.htm">Berkeley Lake</option>
+              <option value="assets/cityDisplay.htm">Buford</option>
+              <option value="assets/cityDisplay.htm">Dacula</option>
+              <option value="assets/cityDisplay.htm">Duluth</option>
+              <option value="assets/cityDisplay.htm">Grayson</option>
+              <option value="assets/cityDisplay.htm">Lawrenceville</option>
+              <option value="assets/cityDisplay.htm">Lilburn</option>
+              <option value="assets/cityDisplay.htm">Loganville</option>
+              <option value="assets/cityDisplay.htm">Norcross</option>
+              <option value="assets/cityDisplay.htms">Peachtree Corners</option>
+              <option value="assets/cityDisplay.htm">Snellville</option>
+              <option value="assets/cityDisplay.htm">Sugar Hill</option>
+              <option value="assets/cityDisplay.htm">Suwanee</option>
             </optgroup>
-            <option label="Hazzard">Hazzard County</option>
-            <option label="King">King County</option>
-            <option label="Linden">Linden County</option>
-            <option label="Mert">Mert County</option>
-          </select>
+            <option value="assets/cityDisplay.htm" label="Hazzard">Hazzard County</option>
+            <option value="assets/cityDisplay.htm" label="King">King County</option>
+            <option value="assets/cityDisplay.htm" label="Linden">Linden County</option>
+            <option value="assets/cityDisplay.htm" label="Mert">Mert County</option>
+          </select> </form>
             </p>
             <p><a class="btn btn-success" href="assets/profile-user.html" role="button">SignUp</a> &nbsp;
                 <a class="btn  btn-success" href="assets/login.html" role="button">LogIn</a>
@@ -90,6 +91,14 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        $(document).ready(function() {
+                    // Your javascript
+                    $("#cityNav").change(function() {
+                        document.location.href = $(this).val();
+                    });
+                }
+    </script>
 </body>
 
 </html>
